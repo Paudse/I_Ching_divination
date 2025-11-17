@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask GUI 範例</title>
+    <style>
+        /* 讓整個頁面置中 */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* 水平置中 */
+            align-items: center;     /* 垂直置中 */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center; /* 文字和按鈕水平置中 */
+            padding: 20px 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .text {
+            white-space: pre-wrap; /* 保留換行 */
+            font-size: 18px;
+            margin-bottom: 20px;   /* 文字和按鈕之間的距離 */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">{{ text1 }}</div>  <!-- 多行文字在上 -->
+        <div class="text">{{ text2 }}</div>
+        <form method="POST">
+            <button type="submit">卜下一卦</button>  <!-- 按鈕在文字下方 -->
+        </form>
+    </div>
+</body>
+</html>
+<!-- <body>
+    <pre>{{ text1 }}</pre>
+    <h2>{{ text1 }}</h2>
+    <h2>{{ text2 }}</h2>
+    <form method="POST">
+        <button type="submit">卜下一卦</button>
+    </form>
+</body>
+</html> -->
